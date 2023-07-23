@@ -1,0 +1,35 @@
+1.
+What does HTML stand for?
+C. Hyper Text Markup Language
+options:
+"A. Hyper Text Multi Language",
+"B. Hyper Text Multiple Language",
+"C. Hyper Text Markup Language",
+"D. Home Text Multi Language",
+
+2.
+What does CSS stand for?
+A. Cascading Style Sheet
+options:
+"A. Cascading Style Sheet",
+"B. Cute Style Sheet",
+"C. Computer Style Sheet",
+"D. Codehal Style Sheet",
+
+3.
+What does PHP stand for?
+A. Hypertext Preprocessor
+options:
+"A. Hypertext Preprocessor",
+"B. Hometext Programming",
+"C. Hypertext Preprogramming",
+"D. Home Text Multi Language",
+
+4.
+What does SQL stand for?
+C. Hyper Text Markup Language
+options:
+"A. Hyper Text Multi Language",
+"B. Hyper Text Multiple Language",
+"C. Hyper Text Markup Language",
+"D. Home Text Multi Language",
