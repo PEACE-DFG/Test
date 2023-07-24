@@ -27,9 +27,18 @@ options:
 
 4.
 What does SQL stand for?
-C. Hyper Text Markup Language
+D. Structured Query Language
 options:
-"A. Hyper Text Multi Language",
-"B. Hyper Text Multiple Language",
-"C. Hyper Text Markup Language",
-"D. Home Text Multi Language",
+"A. Strength Query Language",
+"B. Stylesheet Query Language",
+"C. Science Question Language",
+"D. Structured Query Language",
+
+5.
+What does XML stand for?
+D. Extensible Markup Language
+options:
+"A. Excellent Multiple Language",
+"B. Explore Multiple Language",
+"C. Extra Markup Language",
+"D. Extensible Markup Language",
