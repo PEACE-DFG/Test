@@ -284,6 +284,20 @@ body{
     border-color: rgba(255, 255, 255, .1);
 }
 
+.option-list .option.correct{
+    background: #09001d;
+    color: #00a63d;
+    border-color: #00a63d;
+}
+.option-list .option.incorrect{
+    background: #09001d;
+    color: #a60045;
+    border-color: #a60045;
+}
+.option-list .option.disabled{
+    pointer-events: none;
+}
+
 .quiz-box .quiz-footer {
     display: flex;
     justify-content: space-between;
@@ -309,7 +323,7 @@ body{
     color: rgba(255, 255, 255, .3);
     font-weight: 600;
     cursor: pointer;
-    pointer-events: none;
+    /* pointer-events: none; */
     transition: .5s;
 }
 
