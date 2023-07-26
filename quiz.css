@@ -212,6 +212,33 @@ body{
     left: 0;
 }
 
+#timer{
+    background: aqua;
+    border: 2px solid aqua;
+    border-radius: 20px 5px;
+    display: flex;
+    position: absolute;
+    right: 10px;
+}
+
+#timer span{
+    font-size: 22px;
+    display: grid;
+    place-items: center;
+    margin: 0 10px;
+    color: #000;
+}
+
+#timer #time_sec{
+    height: 44px;
+    width: 50px;
+    background: #000;
+    color: aqua;
+    border: 2px solid aqua;
+    border-radius: 15px 7px;
+    margin: 2px 0 0 27px;
+}
+
 .quiz-section .quiz-box {
     position: relative;
     width: 500px;

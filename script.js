@@ -8,17 +8,21 @@ const quizBox = document.querySelector('.quiz-box');
 const resultBox = document.querySelector('.result-box');
 const tryAgainBtn = document.querySelector('.tryAgain-btn');
 const goHomeBtn = document.querySelector('.goHome-btn');
+const timeCount = document.querySelector("#timer #time_sec");
 
+// if start button is clicked
 startBtn.onclick = () => {
     popupInfo.classList.add('active');
     main.classList.add('active');
 }
 
+// if the exit button is clicked
 exitBtn.onclick = () => {
     popupInfo.classList.remove('active');
     main.classList.remove('active');
 }
 
+// if the continue button is clicked
 continueBtn.onclick = () => {
     quizSection.classList.add('active');
     popupInfo.classList.remove('active');
@@ -28,6 +32,8 @@ continueBtn.onclick = () => {
     showQuestions(0);
     questionCounter(1);
     headerScore();
+    startTimer(15);
+
 }
 
 tryAgainBtn.onclick = () => {
@@ -62,6 +68,8 @@ goHomeBtn.onclick = () => {
 let questionCount = 0;
 let questionNumb = 1;
 let userScore = 0;
+let counter;
+let timeValue = 15;
 
 const nextBtn = document.querySelector('.next-btn');
 
@@ -72,6 +80,8 @@ nextBtn.onclick = () => {
 
          questionNumb++;
          questionCounter(questionNumb);
+         clearInterval(counter);
+         startTimer(timeValue);
 
          nextBtn.classList.remove('active');
     }
@@ -101,6 +111,7 @@ function showQuestions(index) {
 }
 
 function optionSelected(answer) {
+    clearInterval(counter);
     let userAnswer = answer.textContent;
     let correctAnswer = questions[questionCount].answer;
     let allOptions = optionList.children.length;
@@ -128,6 +139,16 @@ function optionSelected(answer) {
 
     nextBtn.classList.add('active');
 }
+
+function startTimer(time) {
+    counter = setInterval(timer, 1000);
+    function timer(){
+        timeCount.textContent = time;
+        time--;
+    }
+}
+
+
 
 function questionCounter(index) {
     const questionTotal = document.querySelector('.question-total');
@@ -163,3 +184,14 @@ function showResultBox() {
         }
     }, speed);
 }
+
+// var timer;
+// var ele = document.getElementById('time')
+
+// (function(){
+//     var sec = 0;
+//     timer = setInterval(() => {
+//         ele.innerHTML = '00:'+sec;
+//         sec ++;
+//     }, 1000) 
+// })()
