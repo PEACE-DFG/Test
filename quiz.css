@@ -27,7 +27,7 @@ body{
 
 .logo{
     text-decoration: none;
-    color: #09001d;
+    color:aqua;
     font-style: italic;
     font-size: 32px;
     font-weight: 700;
@@ -36,7 +36,7 @@ body{
 
 .navBar a{
     font-size: 18px;
-    color: #000;
+    color: white;
     text-decoration: none;
     font-weight: 500;
     margin-left: 35px;
@@ -50,7 +50,7 @@ body{
 
 .main{
     min-height: 100vh;
-    background: url(./Images/images.png);
+    background: linear-gradient(rgb(0,0,0,0.4),rgb(0,0,0,0.4)),url('https://cdn.pixabay.com/photo/2015/01/08/18/27/startup-593341_1280.jpg');
     background-size: cover;
     background-position: center;
     pointer-events: auto;
@@ -89,7 +89,8 @@ body{
 .home-content h1{
     font-size: 78px;
     font-weight: 700;
-    text-shadow: 0 0 10px rgba(0, 0, 0, .3);
+    color: white;
+    text-shadow: 5px 5px 10px rgb(0, 0, 0, .9);
 }
 
 .home-content p{

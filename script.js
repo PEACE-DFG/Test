@@ -32,7 +32,7 @@ continueBtn.onclick = () => {
     showQuestions(0);
     questionCounter(1);
     headerScore();
-    startTimer(15);
+    startTimer(30);
 
 }
 
@@ -69,7 +69,7 @@ let questionCount = 0;
 let questionNumb = 1;
 let userScore = 0;
 let counter;
-let timeValue = 15;
+let timeValue = 30;
 
 const nextBtn = document.querySelector('.next-btn');
 
@@ -170,19 +170,41 @@ function showResultBox() {
     const circularProgress = document.querySelector('.circular-progress');
     const progressValue = document.querySelector('.progress-value');
     let progressStartValue = -1;
-    let progressEndValue = (userScore / questions.length) * 100;
-    let speed = 20;
+let progressEndValue = (userScore / questions.length) * 100;
+let speed = 20;
 
-    let progress = setInterval(() => {
-        progressStartValue++;
+// Ensure the progressEndValue doesn't exceed 100%
+progressEndValue = Math.min(progressEndValue, 100);
+
+let progress = setInterval(() => {
+    progressStartValue++;
+    
+    // Cap progressStartValue at progressEndValue
+    progressStartValue = Math.min(progressStartValue, progressEndValue);
+    
+    progressValue.textContent = `${progressStartValue}%`;
+    circularProgress.style.background = `conic-gradient(aqua ${progressStartValue * 3.6}deg, rgba(255, 255, 255, .1) 0deg)`;
+
+    if (progressStartValue >= progressEndValue) {
+        clearInterval(progress);
+    }
+}, speed);
+
+    // let progressStartValue = -1;
+    // let progressEndValue = (userScore / questions.length) * 100;
+    // let speed = 20;
+
+    // let progress = setInterval(() => {
+    //     progressStartValue++;
         
-        progressValue.textContent = `${progressStartValue}%`;
-        circularProgress.style.background = `conic-gradient(aqua ${progressStartValue * 3.6}deg, rgba(255, 255, 255, .1) 0deg)`;
+    //     progressValue.textContent = `${progressStartValue}%`;
+    //     circularProgress.style.background = `conic-gradient(aqua ${progressStartValue * 3.6}deg, rgba(255, 255, 255, .1) 0deg)`;
 
-        if (progressStartValue == progressEndValue) {
-            clearInterval(progress);
-        }
-    }, speed);
+    //     if (progressStartValue == progressEndValue) {
+    //         clearInterval(progress);
+    //     }
+    // }, speed);
+    
 }
 
 // var timer;

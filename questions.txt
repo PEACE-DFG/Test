@@ -42,3 +42,12 @@ options:
 "B. Explore Multiple Language",
 "C. Extra Markup Language",
 "D. Extensible Markup Language",
+
+6.
+Inline styles are written within which attribute.
+A. style
+options:
+"A. style",
+"B. css",
+"C. stylesheet",
+"D. Both A. and B."
